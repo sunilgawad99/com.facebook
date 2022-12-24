@@ -10,6 +10,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import facebook.Base.BaseClass;
+import facebook.Pom.EditProfile;
 import facebook.Pom.HomePage;
 import facebook.Pom.ProfilePage;
 import facebook.Pom.Utility;
@@ -21,6 +22,7 @@ public class LoginTest {
 	signInPage login;
 	HomePage home;
 	ProfilePage pro;
+	EditProfile edit;
 	@BeforeClass
 	public void initilization()
 	{
@@ -31,6 +33,7 @@ public class LoginTest {
 		login= new signInPage(driver);
 		home = new HomePage(driver);
 		pro = new ProfilePage(driver);
+		edit = new EditProfile(driver);
 	}
 	
 	@Test(priority=1)
@@ -60,6 +63,14 @@ public class LoginTest {
 		
 		pro.clickOnProfileLink();
 		pro.addStory(story);
+		
+	}
+	
+	@Test(dependsOnMethods = {"verifyUserCanLogin"})
+	public void editProfile()
+	{
+		
+		edit.editProfile();
 		
 	}
 	

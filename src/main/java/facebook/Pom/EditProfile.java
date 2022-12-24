@@ -20,7 +20,44 @@ public class EditProfile {
 	 @FindBy(xpath="(//span[text()='Sunil Gawad'])[1]")
 		WebElement pname;
 	 
-	// @FindBy(xpath = "//span[text()='Edit profile']")
+	 @FindBy(xpath = "//span[text()='Edit profile']")
+	 WebElement editProfile;
+	 
+	 @FindBy(xpath = "//span[text()='Edit Your About Info']")
+	 WebElement edit;
+	 
+	 @FindBy(xpath = "//a[@aria-label='Edit']")
+	 WebElement editMobile;
+	 
+	 @FindBy(xpath = "(//a[text()='Remove'])[2]")
+	 WebElement remove;
+	 
+	 @FindBy(xpath = "//button[@id='u_0_l_+U']")
+	 WebElement reNumber;
 	 
 
+	 public void editProfile()
+	 {
+		 Utility.waitUtilElementFound(pname);
+		 pname.click();
+		 Utility.waitUtilElementFound(editProfile);
+		 editProfile.click();
+		 Utility.waitUtilElementFound(edit);
+		 Utility.scrollingAction(edit);
+		 edit.click();
+		 Utility.waitUtilElementFound(editMobile);
+		 editMobile.click();
+		 remove.click();
+		 Utility.waitUtilElementFound(reNumber);
+		 reNumber.click();
+		 
+	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 }

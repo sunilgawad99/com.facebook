@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.logging.FileHandler;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -57,7 +58,12 @@ public class Utility {
 		org.openqa.selenium.io.FileHandler.copy(source, desti);
 	}
 	
-	
+	public static void scrollingAction(WebElement ele)
+	{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0],scrollIntoView(true);", ele);
+		
+	}
 	
 	
 }

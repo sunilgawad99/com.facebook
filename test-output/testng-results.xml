@@ -1,47 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="3" passed="1" failed="1" skipped="0">
+<testng-results ignored="1" total="4" passed="1" failed="2" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[testpassed]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-12-24T14:32:36 IST" name="Suite" finished-at="2022-12-24T14:34:15 IST" duration-ms="98909">
+  <suite started-at="2022-12-24T15:50:49 IST" name="Suite" finished-at="2022-12-24T15:54:26 IST" duration-ms="216696">
     <groups>
     </groups>
-    <test started-at="2022-12-24T14:32:36 IST" name="Test" finished-at="2022-12-24T14:34:15 IST" duration-ms="98909">
+    <test started-at="2022-12-24T15:50:49 IST" name="Test" finished-at="2022-12-24T15:54:26 IST" duration-ms="216696">
       <class name="facebook.testClasses.LoginTest">
-        <test-method is-config="true" signature="initilization()[pri:0, instance:facebook.testClasses.LoginTest@12aba8be]" started-at="2022-12-24T14:32:36 IST" name="initilization" finished-at="2022-12-24T14:33:14 IST" duration-ms="37727" status="PASS">
+        <test-method is-config="true" signature="initilization()[pri:0, instance:facebook.testClasses.LoginTest@290222c1]" started-at="2022-12-24T15:50:49 IST" name="initilization" finished-at="2022-12-24T15:52:07 IST" duration-ms="78008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initilization -->
-        <test-method signature="verifyUserCanLogin()[pri:1, instance:facebook.testClasses.LoginTest@12aba8be]" started-at="2022-12-24T14:33:14 IST" name="verifyUserCanLogin" finished-at="2022-12-24T14:33:26 IST" duration-ms="11826" status="PASS">
+        <test-method signature="verifyUserCanLogin()[pri:1, instance:facebook.testClasses.LoginTest@290222c1]" started-at="2022-12-24T15:52:07 IST" name="verifyUserCanLogin" finished-at="2022-12-24T15:52:16 IST" duration-ms="9482" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[testpassed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyUserCanLogin -->
-        <test-method signature="shareStroy()[pri:0, instance:facebook.testClasses.LoginTest@12aba8be]" started-at="2022-12-24T14:33:26 IST" name="shareStroy" finished-at="2022-12-24T14:34:01 IST" depends-on-methods="facebook.testClasses.LoginTest.verifyUserCanLogin" duration-ms="35067" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="editProfile()[pri:0, instance:facebook.testClasses.LoginTest@290222c1]" started-at="2022-12-24T15:52:17 IST" name="editProfile" finished-at="2022-12-24T15:53:44 IST" depends-on-methods="facebook.testClasses.LoginTest.verifyUserCanLogin" duration-ms="87725" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Unable to locate element: enterText
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [39265b92-ba3c-4676-a16f-1f5df0272032, findElement {using=xpath, value=enterText}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 108.0.1, moz:accessibilityChecks: false, moz:buildID: 20221215175817, moz:debuggerAddress: 127.0.0.1:7277, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12952, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:7277/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 39265b92-ba3c-4676-a16f-1f5df0272032]]>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (//span[text()='Sunil Gawad'])[1]' (tried for 60 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: enterText
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (//span[text()='Sunil Gawad'])[1]' (tried for 60 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at facebook.Pom.Utility.waitUtilElementFound(Utility.java:28)
+at facebook.Pom.EditProfile.editProfile(EditProfile.java:41)
+at facebook.testClasses.LoginTest.editProfile(LoginTest.java:73)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: (//span[text()='Sunil Gawad'])[1]
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15.1'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [39265b92-ba3c-4676-a16f-1f5df0272032, findElement {using=xpath, value=enterText}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 108.0.1, moz:accessibilityChecks: false, moz:buildID: 20221215175817, moz:debuggerAddress: 127.0.0.1:7277, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12952, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:7277/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 39265b92-ba3c-4676-a16f-1f5df0272032
+Command: [15a2b9c4-912d-4a03-b5b2-2759b98fc4dd, findElement {using=xpath, value=(//span[text()='Sunil Gawad'])[1]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 108.0.1, moz:accessibilityChecks: false, moz:buildID: 20221215175817, moz:debuggerAddress: 127.0.0.1:1894, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11612, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:1894/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 15a2b9c4-912d-4a03-b5b2-2759b98fc4dd
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -57,8 +84,62 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at facebook.Pom.ProfilePage.addStory(ProfilePage.java:76)
-at facebook.testClasses.LoginTest.shareStroy(LoginTest.java:62)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at com.sun.proxy.$Proxy17.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editProfile -->
+        <test-method signature="shareStroy()[pri:0, instance:facebook.testClasses.LoginTest@290222c1]" started-at="2022-12-24T15:53:48 IST" name="shareStroy" finished-at="2022-12-24T15:54:03 IST" depends-on-methods="facebook.testClasses.LoginTest.verifyUserCanLogin" duration-ms="15026" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: (//span[text()='Sunil Gawad'])[1]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [15a2b9c4-912d-4a03-b5b2-2759b98fc4dd, findElement {using=xpath, value=(//span[text()='Sunil Gawad'])[1]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 108.0.1, moz:accessibilityChecks: false, moz:buildID: 20221215175817, moz:debuggerAddress: 127.0.0.1:1894, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11612, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:1894/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 15a2b9c4-912d-4a03-b5b2-2759b98fc4dd]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: (//span[text()='Sunil Gawad'])[1]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [15a2b9c4-912d-4a03-b5b2-2759b98fc4dd, findElement {using=xpath, value=(//span[text()='Sunil Gawad'])[1]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 108.0.1, moz:accessibilityChecks: false, moz:buildID: 20221215175817, moz:debuggerAddress: 127.0.0.1:1894, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11612, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:1894/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 15a2b9c4-912d-4a03-b5b2-2759b98fc4dd
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at com.sun.proxy.$Proxy17.click(Unknown Source)
+at facebook.Pom.ProfilePage.clickOnProfileLink(ProfilePage.java:61)
+at facebook.testClasses.LoginTest.shareStroy(LoginTest.java:64)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -93,7 +174,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shareStroy -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:facebook.testClasses.LoginTest@12aba8be]" started-at="2022-12-24T14:34:03 IST" name="closeBrowser" finished-at="2022-12-24T14:34:15 IST" duration-ms="11987" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:facebook.testClasses.LoginTest@290222c1]" started-at="2022-12-24T15:54:04 IST" name="closeBrowser" finished-at="2022-12-24T15:54:26 IST" duration-ms="21688" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

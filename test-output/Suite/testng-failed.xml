@@ -8,6 +8,7 @@
     <classes>
       <class name="facebook.testClasses.LoginTest">
         <methods>
+          <include name="editProfile"/>
           <include name="closeBrowser"/>
           <include name="initilization"/>
           <include name="verifyUserCanLogin"/>
