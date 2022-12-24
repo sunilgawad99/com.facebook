@@ -1,0 +1,72 @@
+Scanario:  user can signup FB
+1) user can hit URL: https://www.facebook.com/
+2)verify user can click on Signup button
+3) verify user can navigate to signup page
+4) vrify user can insert inpunt in Fname text box
+5) vrify user can insert inpunt in Lname text box
+7) vrify user can insert inpunt in mobile or email text box
+8) vrify user can insert inpunt in New password text box
+9) vrify user can select date of birth
+10) verify user can click geneder button
+11) verify user can click on signup button
+
+/* for login page */
+
+Scanario:  user can login with valid credincial
+
+1) Verify user can enter valid URL
+2) Verify user can navigate to login page
+3) Verify user can enter valid user name
+4) Verify user can enter valid password
+5) Vrify user can click on login button
+6) Verify user can navigate home page
+
+
+/* for FB Home page */
+Scanarios: user can click on hearders all button and take titile of page
+
+1) Verify user can login 
+2) verify user can click on home button
+3) verify user can getTittle of page
+4) verify user can click on watch button
+5) verify user can getTittle of page
+6) verify user can click on marketplace button
+7) verify user can getTittle of page
+8) verify user can click on groups button
+9) verify user can getTittle of page
+10)verify user can click on Games button
+11)verify user can getTittle of page
+
+/* home page search box */
+scnarios : user can click on search box and enter input in box
+1) Verify user can click on search box
+2) Verify user can enter input in search box
+3) Verify user can select particular name in display list
+4) Verify user can navigate clicked result
+
+/* profile page */
+Scanario : add the story
+
+1) Verify user can click on profle tag
+2) Verify user can click on add story button
+3) Verify user can click on create story option
+4) Verify user can enter text in start typing inbox
+5) Verify user can choose any font style given list box
+6) Verify user can choose any color back ground in given list
+7) Verify user can click on share to story button
+8) Verify user can see in story on home page
+
+
+//* Edite profile */
+
+Scanario: edit profile
+1) Verify user can click on profile tag
+2) Verify user can click edit profile button
+3) Verify user can click edit your about info link
+4) Verify user can click on remove mobile tag
+5) Verify user can click on remove button
+
+
+
+
+
