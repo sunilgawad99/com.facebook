@@ -1,8 +1,11 @@
 package facebook.Pom;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 import java.util.logging.FileHandler;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -61,9 +64,24 @@ public class Utility {
 	public static void scrollingAction(WebElement ele)
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0],scrollIntoView(true);", ele);
+		js.executeScript("arguments[0].scrollIntoView(true);", ele);
 		
 	}
+	
+	public static String getConfigData(String key) throws IOException
+	{
+		
+		FileInputStream fis = new FileInputStream("E:\\Velocity\\facebook\\src\\main\\resources\\config\\UandP.properties");
+		Properties pro = new Properties();
+		pro.load(fis);
+		return pro.getProperty(key);
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 }

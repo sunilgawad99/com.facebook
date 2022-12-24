@@ -1,5 +1,12 @@
 package facebook.Pom;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import javax.imageio.stream.FileImageInputStream;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,12 +30,17 @@ public class signInPage {
 	
 	@FindBy(name="login")
 	WebElement lobutton;
+	@FindBy(xpath = "//span[text()='Photo/video']")
+	WebElement photo;
 	
-	public void login(String email,String password)
+	public String login() throws IOException
 	{
-		mail.sendKeys(email);
-		pass.sendKeys(password);
+		
+		mail.sendKeys(Utility.getConfigData("Uname"));
+		pass.sendKeys(Utility.getConfigData("Upass"));
 		lobutton.click();
+		Utility.waitUtilElementFound(photo);
+		return photo.getText();
 	}
 	
 	

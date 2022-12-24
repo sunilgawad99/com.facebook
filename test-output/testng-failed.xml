@@ -11,8 +11,6 @@
           <include name="editProfile"/>
           <include name="closeBrowser"/>
           <include name="initilization"/>
-          <include name="verifyUserCanLogin"/>
-          <include name="shareStroy"/>
         </methods>
       </class> <!-- facebook.testClasses.LoginTest -->
     </classes>

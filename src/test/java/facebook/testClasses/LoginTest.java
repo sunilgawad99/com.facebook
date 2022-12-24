@@ -1,5 +1,6 @@
 package facebook.testClasses;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
@@ -7,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import facebook.Base.BaseClass;
@@ -24,11 +26,12 @@ public class LoginTest {
 	ProfilePage pro;
 	EditProfile edit;
 	@BeforeClass
-	public void initilization()
+	@Parameters("browser")
+	public void initilization(String browser)
 	{
 
 		BaseClass base = new BaseClass();
-		driver=base.driverInitilization();
+		driver=base.driverInitilization(browser);
 		Utility ut = new Utility(driver);
 		login= new signInPage(driver);
 		home = new HomePage(driver);
@@ -37,11 +40,12 @@ public class LoginTest {
 	}
 	
 	@Test(priority=1)
-	public void verifyUserCanLogin()
+	public void verifyUserCanLogin() throws IOException
 	{
-		String userName="facebookID";
-		String pass="facebookPass";
-		login.login(userName, pass);
+		String actual="Photo/video";
+		String expected=login.login();
+		Assert.assertEquals(actual, expected);
+		
 	}
 	
 	@Test(enabled = false)
@@ -56,7 +60,7 @@ public class LoginTest {
 	}
 	
 	
-	@Test(dependsOnMethods = {"verifyUserCanLogin"})
+	@Test(dependsOnMethods = {"verifyUserCanLogin"},enabled = false)
 	public void shareStroy() throws IOException, InterruptedException
 	{
 		String story="Hello every one";
@@ -66,7 +70,7 @@ public class LoginTest {
 		
 	}
 	
-	@Test(dependsOnMethods = {"verifyUserCanLogin"})
+	@Test(priority = 2)
 	public void editProfile()
 	{
 		

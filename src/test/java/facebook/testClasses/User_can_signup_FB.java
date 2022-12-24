@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import facebook.Base.BaseClass;
@@ -21,10 +22,11 @@ public class User_can_signup_FB {
 	WebDriver driver;
 	
 	@BeforeClass
-	public void loadDriver()
+	@Parameters("browser")
+	public void loadDriver(String browser)
 	{
 		BaseClass base = new BaseClass();
-		driver=base.driverInitilization();
+		driver=base.driverInitilization(browser);
 		Utility ut = new Utility(driver);
 		sf = new SignupForm(driver);
 	}
@@ -40,7 +42,7 @@ public class User_can_signup_FB {
 		sf.selectMonth(m.get("month"));
 		sf.selectYear(m.get("year"));
 		sf.selectGender();
-		sf.signup();
+		//sf.signup();
 	}
 	
 	@DataProvider(name="testData")
@@ -49,19 +51,19 @@ public class User_can_signup_FB {
 		Map<String,String> map = new HashMap<String,String>();
 		map.put("name", "sunil");
 		map.put("lname", "gawad");
-		map.put("mail", "sgawad89@gmail.com");
-		map.put("pass", "Sunil@89");
-		map.put("date", "9");
-		map.put("month", "Jul");
-		map.put("year", "1991");
+		map.put("mail", "****89@gmail.com");
+		map.put("pass", "****l@89");
+		map.put("date", "8");
+		map.put("month", "Jan");
+		map.put("year", "2091");
 		HashMap<String,String>map1= new HashMap<>();
 		map1.put("name", "sai");
 		map1.put("lname", "gawad");
-		map1.put("mail", "gawadsunil89@gmail.com");
-		map1.put("pass", "Sunil@89");
-		map1.put("date", "17");
+		map1.put("mail", "****89@gmail.com");
+		map1.put("pass", "*****@89");
+		map1.put("date", "1");
 		map1.put("month", "Dec");
-		map1.put("year", "2020");
+		map1.put("year", "2025");
 		Object [][] o={ {map},{map1}};
 		return o;
 	}

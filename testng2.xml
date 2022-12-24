@@ -5,7 +5,7 @@
 <listener class-name="Listenerss.Listeners"></listener>
 </listeners>
   <test thread-count="5" name="Test">
-  
+  <parameter name="browser" value="firefox"></parameter>
     <classes>
      
       <class name="facebook.testClasses.LoginTest"/>
