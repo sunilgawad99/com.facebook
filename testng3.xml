@@ -2,13 +2,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 <listeners>
+
 <listener class-name="Listenerss.Listeners"></listener>
+
 </listeners>
   <test thread-count="5" name="Test">
-   <parameter name="browser" value="chrome"></parameter>
+  <parameter name="browser" value="firefox"></parameter>
     <classes>
-      <class name="facebook.testClasses.User_can_signup_FB"/>
-      <class name="facebook.testClasses.LoginTest"/>
+      
+      <class name="facebook.testClasses.Group_Tag"/>
       
     </classes>
   </test> <!-- Test -->

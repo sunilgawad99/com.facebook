@@ -5,14 +5,14 @@
     <listener class-name="Listenerss.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="facebook.testClasses.LoginTest">
+      <class name="facebook.testClasses.User_can_signup_FB">
         <methods>
-          <include name="editProfile"/>
-          <include name="closeBrowser"/>
-          <include name="initilization"/>
+          <include name="loadDriver"/>
+          <include name="verifyUserCanClickOnNewAccount"/>
         </methods>
-      </class> <!-- facebook.testClasses.LoginTest -->
+      </class> <!-- facebook.testClasses.User_can_signup_FB -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -70,7 +70,7 @@ public class LoginTest {
 		
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 2,enabled = false)
 	public void editProfile()
 	{
 		

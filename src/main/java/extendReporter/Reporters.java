@@ -9,7 +9,7 @@ public class Reporters {
 	
 public static ExtentReports getReport()
 {
-	String path = "E:\\Velocity\\facebook\\report\\index.html";
+	String path = "D:\\Velocity\\facebook\\report\\index.html";
 	ExtentHtmlReporter reporter = new ExtentHtmlReporter(path);
 	reporter.config().setDocumentTitle("FacebookAuto");
 	reporter.config().setReportName("Web Automation");

@@ -47,7 +47,7 @@ public class Utility {
 	
 	public static String getScreenShot(String testCaseName) throws IOException
 	{
-		String path= "E:\\Velocity\\facebook\\screenshots\\"+testCaseName+".png";
+		String path= "D:\\Velocity\\facebook\\screenshots\\"+testCaseName+".png";
 		File source= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		File desti = new File(path);
 		org.openqa.selenium.io.FileHandler.copy(source, desti);
@@ -71,7 +71,7 @@ public class Utility {
 	public static String getConfigData(String key) throws IOException
 	{
 		
-		FileInputStream fis = new FileInputStream("E:\\Velocity\\facebook\\src\\main\\resources\\config\\UandP.properties");
+		FileInputStream fis = new FileInputStream("D:\\Velocity\\facebook\\src\\main\\resources\\config\\UandP.properties");
 		Properties pro = new Properties();
 		pro.load(fis);
 		return pro.getProperty(key);
