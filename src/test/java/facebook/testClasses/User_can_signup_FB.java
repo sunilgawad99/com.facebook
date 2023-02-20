@@ -44,6 +44,7 @@ public class User_can_signup_FB {
 		sf.selectGender();
 		//sf.signup();
 	}
+	//<class name="facebook.testClass.LoginTest"/>
 	
 	@DataProvider(name="testData")
 	public Object[][] data()
@@ -51,16 +52,16 @@ public class User_can_signup_FB {
 		Map<String,String> map = new HashMap<String,String>();
 		map.put("name", "sunil");
 		map.put("lname", "gawad");
-		map.put("mail", "****89@gmail.com");
-		map.put("pass", "****l@89");
+		map.put("mail", "drdr89@gmail.com");
+		map.put("pass", "Sdedfl@89");
 		map.put("date", "8");
 		map.put("month", "Jan");
 		map.put("year", "2091");
 		HashMap<String,String>map1= new HashMap<>();
 		map1.put("name", "sai");
 		map1.put("lname", "gawad");
-		map1.put("mail", "****89@gmail.com");
-		map1.put("pass", "*****@89");
+		map1.put("mail", "drdr89@gmail.com");
+		map1.put("pass", "dckdfj@89");
 		map1.put("date", "1");
 		map1.put("month", "Dec");
 		map1.put("year", "2025");

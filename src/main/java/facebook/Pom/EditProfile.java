@@ -29,7 +29,7 @@ public class EditProfile {
 	 @FindBy(xpath = "//a[@aria-label='Edit']")
 	 WebElement editMobile;
 	 
-	 @FindBy(xpath = "(//a[text()='Remove'])[2]")
+	 @FindBy(xpath = "(//span[contains(@id,'u_0')])[2]")
 	 WebElement remove;
 	 
 	 @FindBy(xpath = "//button[@id='u_0_l_+U']")
@@ -47,6 +47,8 @@ public class EditProfile {
 		 edit.click();
 		 Utility.waitUtilElementFound(editMobile);
 		 editMobile.click();
+		 driver.navigate().refresh();
+		 Utility.waitUtilElementFound(remove);
 		 remove.click();
 		 Utility.waitUtilElementFound(reNumber);
 		 reNumber.click();
